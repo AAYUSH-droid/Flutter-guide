@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/emoticon_faces.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -80,6 +81,105 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                 ],
               ),
+            ),
+            // ignore: prefer_const_constructors
+            SizedBox(
+              height: 25,
+            ),
+            //how do u feel
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'How do u feel?',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Icon(
+                  Icons.more_horiz,
+                  color: Colors.white,
+                )
+              ],
+            ),
+            //emoticon faces
+            // ignore: prefer_const_constructors
+            SizedBox(
+              height: 25,
+            ),
+
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                //bad
+                Column(
+                  children: [
+                    EmoticonFace(
+                      emoticonFace: '😔',
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      'Bad',
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    )
+                  ],
+                ),
+                Column(
+                  children: [
+                    EmoticonFace(
+                      emoticonFace: '🙂',
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      'Bad',
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    )
+                  ],
+                ),
+                Column(
+                  children: [
+                    EmoticonFace(
+                      emoticonFace: '😀',
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      'Bad',
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    )
+                  ],
+                ),
+
+                Column(
+                  children: [
+                    EmoticonFace(
+                      emoticonFace: '😊',
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      'Bad',
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    )
+                  ],
+                ),
+              ],
             )
           ]),
         ),
