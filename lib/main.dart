@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/home_page.dart';
+import 'package:myapp/map.dart';
 import 'package:myapp/profile_page.dart';
 
 void main() => runApp(const MyApp());
@@ -28,10 +29,11 @@ class RootPage extends StatefulWidget {
 }
 
 class _RootPageState extends State<RootPage> {
-  int currentPage = 0;
+  int currentPage = 1;
   List<Widget> pages = const [
     HomePage(),
     ProfilePage(),
+    MyMapPage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -58,6 +60,10 @@ class _RootPageState extends State<RootPage> {
             icon: Icon(Icons.person),
             label: 'Profile',
           ),
+          NavigationDestination(
+            icon: Icon(Icons.map),
+            label: 'map',
+          )
         ],
         onDestinationSelected: (int index) {
           setState(() {

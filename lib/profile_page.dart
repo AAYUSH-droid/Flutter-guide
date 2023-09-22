@@ -12,7 +12,7 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[800],
+      backgroundColor: Colors.green[800],
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(25.0),
@@ -180,7 +180,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   ],
                 ),
               ],
-            )
+            ),
           ]),
         ),
       ),
