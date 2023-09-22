@@ -10,6 +10,27 @@ class LearnFlutter extends StatefulWidget {
 class _LearnFlutterState extends State<LearnFlutter> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Learn Flutter'),
+        automaticallyImplyLeading: false,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          icon: const Icon(Icons.arrow_back_ios),
+        ),
+      ),
+      body: const Column(
+        children: <Widget>[
+          Text('Learn'),
+          Expanded(
+            child: FittedBox(
+              child: FlutterLogo(),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
